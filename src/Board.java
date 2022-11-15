@@ -17,6 +17,6 @@ public class Board {
     }
 
     public static void setPositions(int choice, String playerSymbol) {
-        positions[choice]= playerSymbol;
+        positions[choice-1]= playerSymbol;
     }
 }
