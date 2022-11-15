@@ -6,7 +6,6 @@ public class Game {
     Scanner scanner= new Scanner(System.in);
 
     public static void gameOn(){
-
         while (true){
             Board.printBoard();
             roundCircle();
@@ -24,13 +23,22 @@ public class Game {
     }
 
    public static void roundCircle(){
+
        System.out.println("CIRCLE:");
-       Game.setPlay(Players.CirclePlayer);
+       try {
+           Game.setPlay(Players.CirclePlayer);
+       }catch (Exception e){
+           System.out.println("Number doesn't exist");
+       }
    }
 
    public static void roundCross(){
+        try{
        System.out.println("CROSS:");
        Game.setPlay(Players.CrossPlayer);
+        }catch (Exception e){
+            System.out.println("Number doesn't exist");
+        }
    }
 
     public static void setPlay(Players player){
