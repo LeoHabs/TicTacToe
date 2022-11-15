@@ -28,7 +28,7 @@ public class Game {
        try {
            Game.setPlay(Players.CirclePlayer);
        }catch (Exception e){
-           System.out.println("Number doesn't exist");
+           System.out.println("Number doesn't exist.You lost your turn");
        }
    }
 
@@ -37,7 +37,7 @@ public class Game {
        System.out.println("CROSS:");
        Game.setPlay(Players.CrossPlayer);
         }catch (Exception e){
-            System.out.println("Number doesn't exist");
+            System.out.println("Number doesn't exist.You lost your turn");
         }
    }
 
@@ -98,4 +98,5 @@ public class Game {
             return "CROSS";
         }
     }
+
 }
