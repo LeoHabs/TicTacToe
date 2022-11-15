@@ -16,12 +16,14 @@ public class Board {
     }
 
     public static void setPositions(int choice, String playerSymbol) {
-        checkUnavailability(choice);
+        if(checkUnavailability(choice)){
+            return;
+        };
         positions[choice-1]= playerSymbol;
     }
 
     public static boolean checkUnavailability(int option){
-        if(positions[option].equals("X") || positions[option].equals("O")){
+        if(positions[option-1].equals("X") || positions[option-1].equals("O")){
             System.out.println("Position unavailable. You lost your turn");
             return true;
         }
