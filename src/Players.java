@@ -1,11 +1,10 @@
 public enum Players {
-    CirclePlayer("O", "CirclePlayer"),
-    CrossPlayer("X","CrossPlayer");
+    CirclePlayer("O"),
+    CrossPlayer("X");
 
     String symbol;
-    String name;
-    Players(String symbol,String name) {
-        this.name= name;
+
+    Players(String symbol) {
         this.symbol = symbol;
     }
 }
